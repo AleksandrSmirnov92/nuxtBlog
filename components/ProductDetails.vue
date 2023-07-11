@@ -14,10 +14,7 @@
   </div>
 </template>
 <script setup>
-const { product } = defineProps({
-  product: Object,
-  require: true,
-});
+const { product } = defineProps(["product"]);
 </script>
 <style scoped>
 .img {
