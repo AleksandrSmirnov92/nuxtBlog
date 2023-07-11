@@ -2,8 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-/* @layer components {
-  .router-link-exact-active {
-    @apply text-gray-500;
+@layer components {
+  .card {
+    @apply p-3 rounded-md bg-white shadow-md h-full;
   }
-} */
+}

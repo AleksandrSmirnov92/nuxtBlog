@@ -4,12 +4,8 @@
     <div>
       <div class="w-full bg-gray-300">
         <div class="grid grid-cols-4 gap-5">
-          <div v-for="product of products">
-            <NuxtLink
-              class="container hover:bg-gray-700 hover:text-green-500"
-              :to="`product/${product.id}`"
-              >{{ product.title }}</NuxtLink
-            >
+          <div v-for="product in products">
+            <ProductCard :product="product" />
           </div>
         </div>
       </div>
@@ -17,5 +13,5 @@
   </div>
 </template>
 <script setup>
-let { data: products } = await useFetch("https://fakestoreapi.com/products");
+const { data: products } = await useFetch("https://fakestoreapi.com/products");
 </script>
